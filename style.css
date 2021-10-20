@@ -1,0 +1,138 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+a{
+  color: white;
+  text-decoration: none; /*tirar o sublinhado*/
+}
+.conteiner {
+  min-height: 500px;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /**/
+  justify-content: space-between; /*justificar o conteúdo com espaço entre eles*/
+  padding-top: 140px;
+  margin-top: -0.5em; /*tirar os espaço em branco do topo do menu*/
+}
+.header-container{
+  background-color: rgb(51, 51, 51);
+  min-height: 100px;
+  margin-bottom: 50px;
+  position: fixed; /*deixa o objeto fixo na tela durante a rolagem*/
+  width: 100%;
+}
+/*cria um menu dentro do outro para ficar centralizado no layout*/
+header {
+  max-width: 1024px;  
+  min-height: 120px;
+  background-color: rgb(51, 51, 51);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.col {
+  width: 30%;
+  margin-bottom: 40px; /*margem a baixo de cada box*/
+  background-color: rgb(47, 123, 246);
+}
+.col p {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.2rem; /*espaço entra as linhas*/
+  padding: 20px; /**/
+}
+/*Dimensiona o tamanho da imagem na box*/
+.col img {
+  width: 100%;
+  height: auto;
+
+}
+/*deixar a primeira linha do texto em bold*/
+.col p::first-line{
+  font-weight: 700;
+}
+/*ligar e desligar, tirar o box10 do modo desktop*/
+.hide-desktop-only {
+  display: none;
+}
+.mybutton{
+  padding: 10px 25px; /*espaço entre os botões*/
+  border-style: solid;
+  border-width: 1px; /*espessura da borda*/
+  margin-left: 15px;
+}
+.highlight{
+  font-weight: 700;
+}
+.mobi-wrapper{
+  display: none;
+}
+/*visão tablet*/
+@media (max-width: 768px) {
+  .col {
+    width: 45%; /*assume duas colunas*/
+  }
+  .hide-desktop-on {
+    display: block;
+  }
+  .col {
+    width: 100%; /*assume uma coluna*/
+  }
+  header{
+
+  }
+  .header-container{
+    position: relative; /*deixa o objeto fixo na tela durante a rolagem*/
+  }
+  .conteiner{
+    padding-top: 140px;
+  }
+  nav{
+    display: none; /*vai fazer que o menu desapareça*/
+  }
+  nav a{
+    display: block;
+  }
+  .logo{
+    padding: 40px;
+  }
+  .mybutton{
+    margin-left: 0;
+  }
+  .mobi-wrapper{
+    display: none;
+  }
+  .mobi-wrapper{
+    display: block;
+    padding-right: 30px;
+  }
+  .mob-nav{
+    display: none;
+    position: absolute;
+    padding: 17px;
+  }
+  .navbutton{
+    display: block;
+    background-color: rgb(47, 123, 246);
+    padding: 15px 30px;
+    margin-left: -80px;
+    text-align: center;
+
+  }
+}
+/*visão Smartphone*/
+@media (max-width: 400px) {
+
+  /*bloquea o box10*/
+  .hide-desktop-on {
+    display: block;
+  }
+
+  /*bloquea as imagens a serem exibinas no smartphone*/
+  .hide-mobile {
+    display: none;
+  }
